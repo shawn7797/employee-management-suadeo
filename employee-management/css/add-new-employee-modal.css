@@ -1,0 +1,77 @@
+/* Modal overlay */
+.add-new-employee-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    /* semi-transparent overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    /* blur background */
+    z-index: 9999;
+}
+
+/* Hidden by default */
+.hidden {
+    display: none;
+}
+
+/* Modal content box */
+.modal-content {
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 10px;
+    width: 350px;
+    max-width: 90%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+}
+
+.modal-content h3 {
+    margin-top: 0;
+}
+
+/* Input fields */
+.modal-content input {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal-content #emp-department {
+    display: block;
+    width: 96%;
+    margin: 12px auto;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Buttons */
+.modal-buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.modal-buttons button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: 0.2s;
+}
+
+.modal-buttons button:hover {
+    background-color: #0056b3;
+}
