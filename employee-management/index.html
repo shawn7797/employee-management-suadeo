@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Employee Management System by Shawn Mathias</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/add-new-employee-modal.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" async></script>
+</head>
+
+<body>
+    <div id="message" class="message hidden"></div>
+
+    <h1>Employee Management System by Shawn Mathias</h1>
+
+    <!-- Search -->
+    <input type="text" id="search-input" placeholder="Search by 'name', 'role', 'department'" />
+
+    <!-- Department Filter -->
+    <select id="dept-filter" multiple></select>
+    <button class="filter-clear-btn hidden">Clear Filter</button>
+
+    <!-- Export Buttons -->
+    <button id="export-csv">Export CSV</button>
+    <button id="export-json">Export JSON</button>
+
+    <!-- Add Employee -->
+    <button id="add-employee-btn">Add Employee</button>
+
+    <!-- Displaying the total count -->
+    <span class="rows-count"></span>
+
+    <!-- Table -->
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Department</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
+    </div>
+
+    <!-- Modal -->
+    <div id="add-new-employee-modal" class="add-new-employee-modal hidden">
+        <div class="modal-content">
+            <h3>Add New Employee</h3>
+            <input id="emp-name" placeholder="Name" required />
+            <input id="emp-email" placeholder="Email" required />
+            <input id="emp-role" placeholder="Role" required />
+            <select id="emp-department" placeholder="Department" required>
+                <option value="" disabled selected hidden>Select a department...</option>
+            </select>
+            <button id="save-employee">Save</button>
+            <button id="close-modal">Cancel</button>
+        </div>
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+.message {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #4caf50;
+    /* green for success */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 10000;
+}
+
+.message.show {
+    opacity: 1;
+}
